@@ -13,7 +13,13 @@ aws s3 cp openapi.yaml s3://aws-sam-cli-managed-default-samclisourcebucket-1t8vc
 
 ## デプロイする
 
-
 ```bash
 sam deploy
 ```
+
+## APIからResponseが返ってくることを確認する
+
+- URLは調べてください
+- 正常にResponseが返ってこればOKです
+  - サンプルは ../README.md を参照
+

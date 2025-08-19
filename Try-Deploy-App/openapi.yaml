@@ -1,0 +1,33 @@
+openapi: 3.0.1
+info:
+  title: Try-Deploy-App-Api
+  version: 1.0.0
+
+paths:
+  /hello:
+    get:
+      tags:
+        - hello
+      responses:
+        200:
+          $ref: "#/components/responses/200"
+        500:
+          $ref: "#/components/responses/500"
+      x-amazon-apigateway-integration:
+        type: aws_proxy
+        uri:
+          'Fn::Sub': >-
+            arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${HelloWorldFunction.Arn}/invocations
+        httpMethod: POST
+        responses:
+          default:
+            statusCode: 200
+        passthroughBehavior: when_no_templates
+        contentHandling: CONVERT_TO_TEXT
+
+components:
+  responses:
+    200:
+      description: Success
+    500:
+      description: Internal Server Error

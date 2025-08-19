@@ -3,7 +3,8 @@
 version = 0.1
 
 [default.global.parameters]
-stack_name = "Try-Deploy-App"
+stack_name = "Try-Deploy-App-Stack"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1t8vcnv9f5use"
 
 [default.build.parameters]
 cached = true
@@ -14,13 +15,13 @@ lint = true
 
 [default.deploy.parameters]
 capabilities = "CAPABILITY_IAM"
-stack_name = "Try-Deploy-App-Stack"
-s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1t8vcnv9f5use"
 confirm_changeset = true
 resolve_s3 = false
+parameter_overrides = [
+  "BucketName=aws-sam-cli-managed-default-samclisourcebucket-1t8vcnv9f5use",
+]
 
 [default.package.parameters]
-s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1t8vcnv9f5use"
 resolve_s3 = false
 
 [default.sync.parameters]
