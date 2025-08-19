@@ -43,7 +43,7 @@ $ curl https://example.com/v1/hello
 {"message": "hello world"}
 ```
 
-## 3. S3からオブジェクトを取得し、「hello」を記載があればOKです.
+## 3. S3からオブジェクトを取得し、「hello」を記載があればOKです。
 
 ```bash
 aws s3 cp s3://aws-sam-cli-managed-default-samclisourcebucket-1t8vcnv9f5use/hello.png hello.png

@@ -22,4 +22,3 @@ sam deploy
 - URLは調べてください
 - 正常にResponseが返ってこればOKです
   - サンプルは ../README.md を参照
-
