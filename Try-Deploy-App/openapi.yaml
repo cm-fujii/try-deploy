@@ -17,8 +17,8 @@ paths:
         type: aws_proxy
         uri:
           'Fn::Sub': >-
-            arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${HelloWorldFunction.Arn}/invocations
-        httpMethod: POST
+            arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${SampleFunction.Arn}/invocations
+        httpMethod: GET
         responses:
           default:
             statusCode: 200
