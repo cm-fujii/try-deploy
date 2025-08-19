@@ -24,3 +24,8 @@ Resources:
             Path: /hello
             Method: get
 
+  HelloWorldFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/${HelloWorldFunction}
+
