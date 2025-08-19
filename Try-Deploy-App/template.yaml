@@ -29,3 +29,7 @@ Resources:
     Properties:
       LogGroupName: !Sub /aws/lambda/${HelloWorldFunction}
 
+
+Outputs:
+  HelloWorldApi:
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
