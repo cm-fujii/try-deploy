@@ -49,3 +49,10 @@ $ curl https://example.com/v1/hello
 aws s3 cp s3://aws-sam-cli-managed-default-samclisourcebucket-1t8vcnv9f5use/hello.png hello.png
 ```
 
+# 最後に
+
+Stackを削除してください。
+
+```bash
+sam delete
+```
