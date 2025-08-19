@@ -14,11 +14,14 @@ lint = true
 
 [default.deploy.parameters]
 capabilities = "CAPABILITY_IAM"
+stack_name = "Try-Deploy-App-Stack"
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1t8vcnv9f5use"
 confirm_changeset = true
-resolve_s3 = true
+resolve_s3 = false
 
 [default.package.parameters]
-resolve_s3 = true
+s3_bucket = "aws-sam-cli-managed-default-samclisourcebucket-1t8vcnv9f5use"
+resolve_s3 = false
 
 [default.sync.parameters]
 watch = true
